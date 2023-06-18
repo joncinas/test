@@ -1,0 +1,26 @@
+name: MetaMask
+
+description: Installer for MetaMask plugin for various platforms.
+
+version: 0.1.0
+
+dependencies:  
+  - react-scripts  
+  - metamask-plugin-react
+
+scripts:  
+  build:  
+    react-scripts build
+
+  install:  
+    npm install --save-dev metamask-plugin-react
+
+  test:  
+    react-scripts test
+
+  release:  
+    npm version --force  
+    git add .  
+    git commit -m "Release $version"  
+    git tag $version  
+    npm publish  
